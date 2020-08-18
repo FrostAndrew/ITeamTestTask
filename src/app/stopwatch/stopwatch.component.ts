@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {fromEvent, Observable, Subscriber, Subscription} from "rxjs";
-import {buffer, debounce, debounceTime, filter, map, share} from "rxjs/operators";
+import {fromEvent, Observable, Subscription} from "rxjs";
+import {buffer, debounceTime, filter, map} from "rxjs/operators";
 
 interface StopwatchState {
   seconds: number;
@@ -49,7 +49,7 @@ export class StopwatchComponent implements AfterViewInit{
     };
 
   }
-
+  // After View Init to use ViewChild
   ngAfterViewInit(): void {
     this.clickStream$ = fromEvent(this.waitButton.nativeElement, 'click');
     this.clickStream$.subscribe();
@@ -75,11 +75,13 @@ export class StopwatchComponent implements AfterViewInit{
     this.state.textFormat = this.GetBeautifiedTime();
     console.log(this.state);
   }
+
+  // Zeroing time
   async NullStopWatch(): Promise<void> {
     this.state.seconds = this.state.minutes = this.state.hours = 0;
     this.state.textFormat = this.GetBeautifiedTime();
   }
-
+  // To Start or to stop count
   StartStopTime(isZeroingWatch: boolean): void {
     this.state.isTicks = !this.state.isTicks;
     if(this.timeSub == null || this.timeSub.closed) {
@@ -93,6 +95,7 @@ export class StopwatchComponent implements AfterViewInit{
     console.log('Unsubscribed');
   }
 
+  // To get time as string HH:MM:SS format
   GetBeautifiedTime(): string {
     let str: string = '';
 
