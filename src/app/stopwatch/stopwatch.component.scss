@@ -7,6 +7,9 @@ $avgSize4all: 10em;
   color: black;
   font-size: $avgSize4all;
   margin-bottom: 0;
+  cursor: default;
+  user-select: none;
+  text-shadow: 10px 5px 20px #000000;
 }
 .controls{
   width: 60%;
@@ -14,11 +17,16 @@ $avgSize4all: 10em;
   justify-content: space-evenly;
 }
 .Control {
+  border-radius: $avgSize4all * 0.1;
+  background-color: transparent !important;
   width: $avgSize4all * 0.7;
   height: $avgSize4all * 0.7;
   background-position: center !important;
   background-size: 90% 90% !important;
   background-repeat: no-repeat !important;
+}
+.Control:hover{
+  box-shadow: 0.1em 0.1em 10px 5px #000000 !important;
 }
 .PlayButton {
   background: url('https://img.icons8.com/ios-glyphs/90/000000/play.png');
@@ -32,3 +40,5 @@ $avgSize4all: 10em;
 .ResetButton {
   background: url("https://img.icons8.com/material-rounded/50/000000/recurring-appointment.png");
 }
+
+
