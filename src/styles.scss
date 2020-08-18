@@ -6,8 +6,10 @@ html, body{
 }
 body{
   background: rgb(255,255,255);
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,1) 100%);
 }
 app-root{
   position: relative;
+  top: 30vh !important;
+  width: 60%;
 }

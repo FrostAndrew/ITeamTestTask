@@ -1,8 +1,8 @@
 <div class="stopwatch">
   <h1>{{this.state.textFormat }}</h1>
   <div class="controls">
-    <button (click)="StartStopTime(true)">Start/Stop</button>
-    <button #DoubleClickWaitButton>Wait</button>
-    <button (click)="NullStopWatch()">Reset</button>
+    <div [class]="this.state.isTicks? 'StopButton Control' : 'PlayButton Control'" (click)="StartStopTime(true)"></div>
+    <div class="PauseButton Control" #DoubleClickWaitButton></div>
+    <div class="ResetButton Control" (click)="NullStopWatch()"></div>
   </div>
 </div>

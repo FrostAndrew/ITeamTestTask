@@ -1,3 +1,34 @@
+$avgSize4all: 10em;
+
 .stopwatch{
-  color: white;
+  text-align: -webkit-center;
+}
+.stopwatch h1{
+  color: black;
+  font-size: $avgSize4all;
+  margin-bottom: 0;
+}
+.controls{
+  width: 60%;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+.Control {
+  width: $avgSize4all * 0.7;
+  height: $avgSize4all * 0.7;
+  background-position: center !important;
+  background-size: 90% 90% !important;
+  background-repeat: no-repeat !important;
+}
+.PlayButton {
+  background: url('https://img.icons8.com/ios-glyphs/90/000000/play.png');
+}
+.StopButton {
+  background: url("https://img.icons8.com/ios-filled/100/000000/stop-squared.png");
+}
+.PauseButton {
+  background: url("https://img.icons8.com/ios-filled/100/000000/circled-pause.png");
+}
+.ResetButton {
+  background: url("https://img.icons8.com/material-rounded/50/000000/recurring-appointment.png");
 }
