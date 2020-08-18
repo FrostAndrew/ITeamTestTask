@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "StopwatchApp"
+    }
+  },
+  "defaultProject": "StopwatchApp",
+  "cli": {
+    "analytics": false
+  }
 }

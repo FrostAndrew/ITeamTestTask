@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+body{
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+}
+app-root{
+  position: relative;
+}
